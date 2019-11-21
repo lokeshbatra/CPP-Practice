@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    int arr[] = {1,2,4,5,6};
+    int i = 0;
+    int arrSum = 0;
+    int totalSum = (((sizeof(arr)/sizeof(arr[0])) + 1) * ((sizeof(arr)/sizeof(arr[0])) + 2) )/2   ;   
+    while(i < (sizeof(arr)/sizeof(arr[0])))
+    {
+    arrSum += arr[i];
+    i++;
+    }
+    
+    cout<<"Missing Number is: "<<totalSum-arrSum;
+
+    return 0;
+}
