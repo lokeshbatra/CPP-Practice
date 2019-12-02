@@ -1,3 +1,6 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
 #include <iostream>
 
 using namespace std;
@@ -5,35 +8,40 @@ using namespace std;
 //template<typename T, size_t n>
 
 //void print(T const (& A)[n]) {
-void print(int A[], int size){
- for(int i=0; i<size; i++)
- cout<<A[i]<<" ";
- cout<<endl;
-}
-
-void insert_sort(int a[], int size) {
-     for (int i=1; i<size; i++)
-     {
-         int value = a[i];
-         int pos = i;
-         while(pos > 0 && a[pos-1] > value)
-         {
-             a[pos] = a[pos -1];
-             pos--;
-         }
-         a[pos] = value;
-     }
-  
-}
-
-int main()
+void
+print (int A[], int size)
 {
-    int A[] = {7,2,4,6,1,5,3};
-    cout<<"Before Sorting: ";
-    print(A,7);
-    insert_sort(A,7);
-    cout<<"After Sorting:  ";
-    print(A,7);
+  for (int i = 0; i < size; i++)
+    cout << A[i] << " ";
+  cout << endl;
+}
 
-    return 0;
+void
+insert_sort (int a[], int size)
+{
+  for (int i = 1; i < size; i++)
+    {
+      int value = a[i];
+      int pos = i;
+      while (pos > 0 && a[pos - 1] > value)
+	{
+	  a[pos] = a[pos - 1];
+	  pos--;
+	}
+      a[pos] = value;
+    }
+
+}
+
+int
+main ()
+{
+  int A[] = { 7, 2, 4, 6, 1, 5, 3 };
+  cout << "Before Sorting: ";
+  print (A, 7);
+  insert_sort (A, 7);
+  cout << "After Sorting:  ";
+  print (A, 7);
+
+  return 0;
 }
